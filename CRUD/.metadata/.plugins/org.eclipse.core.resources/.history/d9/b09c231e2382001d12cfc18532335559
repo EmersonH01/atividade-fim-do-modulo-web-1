@@ -1,0 +1,54 @@
+package br.com.produtos.cadastro;
+
+import java.math.BigDecimal;
+
+import javax.persistence.EntityManager;
+
+import br.com.produtos.dao.CategoriaDao;
+import br.com.produtos.dao.Produtodao;
+import br.com.produtos.mapeamento.Categoria;
+import br.com.produtos.mapeamento.Produto;
+import br.com.produtos.util.JPAutil;
+
+public class CadastroDeProduto {  
+	
+	public static void main(String[] args) {
+		Categoria carro = new Categoria ("automoveis");
+		Produto carro1  = new Produto() ;
+	    carro1.setNome("Ferrari");
+	    carro1.setDescricao("Este carro não é fabricado no Brasil ");
+	    carro1.setPreco(new BigDecimal("1000"));
+		
+		
+			
+		
+		//fazendo um insert no Banco de dados 
+		//EntityManagerFactory factory = Persistence.createEntityManagerFactory("Aluguel");
+		//EntityManager em = factory.createEntityManager();
+		
+		
+		EntityManager em = JPAutil.getEntityManeger();
+	    Produtodao produtodao = new Produtodao();
+	    Categoria categoriadao = new Categoria(em);
+		
+		
+	    
+	   
+	    	
+	    	em.getTransaction() .begin();
+			categoriadao.cadastrar(carro1);
+			em.getTransaction() .commit();
+			em.close();
+	    	
+	
+	    
+		
+	    		
+		
+		
+		System.out.println("pronto");
+		
+		
+	}
+
+}
