@@ -1,0 +1,10 @@
+package br.com.produtos.util;
+
+import javax.persistence.EntityManagerFactory;
+
+public class JPAutil {
+  // metodo que vai criar o entity factory 
+	
+	private static final EntityManagerFactory
+	
+}

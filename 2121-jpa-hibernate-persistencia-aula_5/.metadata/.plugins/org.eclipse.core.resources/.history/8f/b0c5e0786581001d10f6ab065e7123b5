@@ -1,0 +1,12 @@
+package model.principal.aluguel;
+
+
+
+public class AluguelDeCarros {
+      
+	private Long id ;
+	private String nome ;
+	private String descricao ;
+	
+	
+}

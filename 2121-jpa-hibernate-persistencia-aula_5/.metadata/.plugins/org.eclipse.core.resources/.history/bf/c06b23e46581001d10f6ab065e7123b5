@@ -1,0 +1,13 @@
+package model.principal.aluguel;
+import java.math.BigDecimal;
+
+
+public class AluguelDeCarros {
+      
+	private Long id ;
+	private String nome ;
+	private String descricao ;
+	private BigDecimal preco ;
+	//private LocalDate dataCadastro ;
+	
+}

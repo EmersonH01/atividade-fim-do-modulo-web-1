@@ -1,0 +1,18 @@
+package model.principal.aluguel;
+import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.LocalDate;
+
+@Entity
+@Table (name =  "Carros")
+public class AluguelDeCarros {
+      
+	private Long id ;
+	private String nome ;
+	private String descricao ;
+	private BigDecimal preco ;
+	private LocalDate dataCadastro ;
+	
+}

@@ -1,0 +1,36 @@
+package br.com.alugue ;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "produtos")
+public class AluguelDeCarros {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	public Produto(Long id, String nome, String descricao, BigDecimal preco, LocalDate dataCadastro) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.dataCadastro = dataCadastro;
+	}
+	private String nome;
+	private String descricao;
+	private BigDecimal preco;
+	private LocalDate dataCadastro = LocalDate.now();
+	
+	
+	
+	
+	

@@ -1,0 +1,49 @@
+package Operação;
+
+import javax.persistence.EntityManager;
+//import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import model.principal.alugue.AluguelDeCarros;
+
+
+public class Negocios {
+
+	public static void main(String[] args) {
+
+		
+		//Atribuindo valor nulo para que o proprio banco de dados coloque um id :
+		AluguelDeCarros c1 = new AluguelDeCarros (1, "ferrari"  , "emerson@gmail.com" , 2500);
+		AluguelDeCarros c2 = new AluguelDeCarros (2, "Bugate"  , "Cleber@gmail.com" , 4000);
+		AluguelDeCarros c3 = new AluguelDeCarros (3,"Audi"  , "Rian@gmail.com" , 5000);
+		AluguelDeCarros c4 = new AluguelDeCarros (4, "Brasilia"  , "Marcio@gmail.com" , 1000 );
+		
+		
+		
+		//instancindo as configurações para o banco de dados 
+		EntityManagerFactory enf = Persistence.createEntityManagerFactory("Aluguel-de-carros");
+		
+		
+		
+		//conexão com o banco de dados 
+		EntityManager em = enf.createEntityManager();
+				
+		
+		
+		//Aqui vai iniciar uma conexão com o banco de dados 
+		em.getTransaction().begin();
+		
+		em.persist(enf);
+		em.persist(enf);
+		em.persist(enf);
+		em.persist(enf);
+		
+		//Aqui eu confirmo as alterações que eu fiz no banco de dados 
+		em.getTransaction().commit();
+
+		
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package br.com.produtos.dao;
+
+import javax.persistence.EntityManager;
+
+import br.com.produtos.mapeamento.Produto;
+
+public class Produtodao {
+ 
+	private EntityManager em ;
+	
+	public void ProdutoDao (EntityManager em ) {
+		this.em = em ; 
+	}	
+	
+	public void cadastrar (Produto produto) {
+		this.em.persist(produto);
+	}
+	
+
+}

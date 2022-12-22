@@ -1,0 +1,15 @@
+package br.com.produtos.dao;
+
+import javax.persistence.EntityManager;
+
+public class Produtodao {
+ 
+	private EntityManager em ;
+	
+	public ProdutoDao (EntityManager em ) {
+		this.em = em ; 
+	}
+	
+	
+	
+}

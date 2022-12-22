@@ -1,0 +1,7 @@
+
+public class AluguelDeCarros {
+      
+	private Long id ;
+	private String nome ;
+	
+}

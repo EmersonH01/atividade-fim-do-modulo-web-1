@@ -1,0 +1,33 @@
+package br.com.produtos.cadastro;
+
+import java.math.BigDecimal;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.produtos.mapeamento.Produto;
+
+public class CadastroDeProduto {  
+	
+	public static void main(String[] args) {
+		Produto carro  = new Produto() ;
+		carro.setNome("Ferrari");
+		carro.setDescricao("Cor vermelha");
+		carro.setPreco(new BigDecimal("1000"));	
+		
+		
+		
+		//fazendo um insert nok Banco de dados 
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("Aluguel");
+		EntityManager em = factory.createEntityManager();
+		
+		em.getTransaction() .begin();
+		em.persist(carro);
+		em.getTransaction() .commit();
+	     
+		
+		
+	}
+
+}

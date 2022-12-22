@@ -1,0 +1,10 @@
+package br.com.produtos.cadastro;
+
+import br.com.produtos.mapeamento.Produto;
+
+public class CadastroDeProduto {  
+	
+	Produto carro = new Produto();
+	carro.
+
+}

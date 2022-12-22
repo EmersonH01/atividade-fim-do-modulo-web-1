@@ -1,0 +1,15 @@
+package br.com.produtos.mapeamento;
+
+import javax.management.RuntimeErrorException;
+
+public class Condition {
+  public static void main(String[] args) {
+	
+	  if(em.persist(carro  ==  em.getTransaction() .commit(){
+		  
+		  throw  new  RuntimeErrorException("Produto cadastrado no banco de dados");	  
+	  }
+	  
+	  
+   }
+}

@@ -1,0 +1,14 @@
+package br.com.aluguel.loja.testes;
+
+import br.com.aluguel.loja.testes.*;
+
+public class CadastroDeProduto {
+	
+	public static void main(String[] args) {
+		
+		Produto carro = new Produto();
+		
+	}
+}
+
+	

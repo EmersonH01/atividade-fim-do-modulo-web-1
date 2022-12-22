@@ -1,0 +1,49 @@
+package br.com.aluguel.loja.testes;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import br.com.aluguel.loja.dao.CategoriaDao;
+import br.com.aluguel.loja.dao.ProdutoDao;
+import br.com.aluguel.loja.modelo.Categoria;
+import br.com.aluguel.loja.modelo.Produto;
+import br.com.aluguel.loja.util.JPAUtil;
+
+public class CadastroDeProduto {
+	
+	public static void main(String[] args) {
+		cadastrarProduto();
+		EntityManager em = JPAUtil.getEntityManager();
+		ProdutoDao produtoDao = new ProdutoDao(em);
+		
+		Produto p = produtoDao.buscarPorId(1l);
+		System.out.println(p.getPreco());
+		
+		List<Produto> todos = produtoDao.buscarPorNomeDaCategoria("CELULARES");
+		todos.forEach(p2 -> System.out.println(p.getNome()));
+	
+		BigDecimal precoDoProduto = produtoDao.buscarPrecoDoProdutoComNome("Xiaomi Redmi");
+		System.out.println("Preco do Produto: " +precoDoProduto);
+	}
+
+	private static void cadastrarProduto() {
+		//Categoria celulares = new Categoria("");
+		Categoria automoveis = new Categoria("");
+		Produto carro = new Produto("ferrari", "Muito legal", new BigDecimal("800"), automoveis );
+		
+		EntityManager em = JPAUtil.getEntityManager();
+		ProdutoDao produtoDao = new ProdutoDao(em);
+		CategoriaDao categoriaDao = new CategoriaDao(em);
+		
+		em.getTransaction().begin();
+		
+		categoriaDao.cadastrar(automoveis);
+		produtoDao.cadastrar(carro);
+		
+		em.getTransaction().commit();
+		em.close();
+	}
+
+}

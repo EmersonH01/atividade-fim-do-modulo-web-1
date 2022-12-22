@@ -1,0 +1,17 @@
+package Operação;
+
+import model.principal.aluguel.AluguelDeCarros;
+
+
+public class Negocios {
+
+	public static void main(String[] args) {
+
+		AluguelDeCarros c1 = new AluguelDeCarros (1 , "ferrari"  , "emerson@gmail.com" , 2500);
+		AluguelDeCarros c2 = new AluguelDeCarros (2 , "Bugate"  , "Cleber@gmail.com" , 4000);
+		AluguelDeCarros c3 = new AluguelDeCarros (3 , "Audi"  , "Rian@gmail.com" , 5000);
+		AluguelDeCarros c4 = new AluguelDeCarros (4 , "Brasilia"  , "Marcio@gmail.com" , 1000 );
+				
+	}
+
+}

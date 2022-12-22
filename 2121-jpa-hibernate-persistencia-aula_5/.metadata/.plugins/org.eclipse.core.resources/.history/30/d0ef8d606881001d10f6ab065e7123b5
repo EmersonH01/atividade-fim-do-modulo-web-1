@@ -1,0 +1,11 @@
+package Operação;
+
+public class Negocios {
+
+	public static void main(String[] args) {
+
+		Carro c1 = new Carro (1 , "Brasilia"  , "emerson@gmail.com");
+		
+	}
+
+}

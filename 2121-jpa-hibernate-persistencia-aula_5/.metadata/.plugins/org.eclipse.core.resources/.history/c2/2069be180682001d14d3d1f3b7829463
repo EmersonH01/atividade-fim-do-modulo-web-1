@@ -1,0 +1,15 @@
+package br.com.produtos.mapeamento;
+
+public class Condition {
+  public static void main(String[] args) {
+	
+	  if(em.persist(carro){
+		  
+		  throws runtime 
+
+		  
+	  }
+	  
+	  
+   }
+}

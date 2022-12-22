@@ -1,0 +1,19 @@
+package br.com.produtos.util;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class JPAutil {
+  // metodo que vai criar o entity factory 
+	
+	private static final EntityManagerFactory FACTORY =	Persistence.createEntityManagerFactory("Aluguel");
+	
+	
+	
+	// em metodo que devolve um entity manage 
+	public static EntityManager getEntityManeger() {
+		
+	}
+	
+}

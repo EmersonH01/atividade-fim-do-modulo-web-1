@@ -1,0 +1,11 @@
+package br.com.produtos.mapeamento;
+
+public enum Categoria {
+	
+	//definindo os tipos de categoria dos produtos que eu vou ter 
+	
+	 Automoveis ,
+	 tecnologicas ,
+	 eletronicos,
+
+}
